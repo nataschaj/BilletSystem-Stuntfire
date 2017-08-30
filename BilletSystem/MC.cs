@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BilletSystemDLL
+namespace BilletSystem
 {
-    public class Bil
+    public class MC
     {
         public string Nummerplade;
         public DateTime Dato;
 
-        public Bil()
+        public MC()
         {
 
         }
         public int Pris()
         {
-            return 240;
+            return 125;
         }
 
         public string Køretøj()
         {
-            return "Bil";
+            return "MC";
         }
     }
 }
