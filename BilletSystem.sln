@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletSystem", "BilletSyste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletSystemDLL", "BilletSystemDLL\BilletSystemDLL.csproj", "{4B04AECC-E1D9-494F-96D8-74DCB78CCD3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilletSystemDLLTests", "BilletSystemDLLTests\BilletSystemDLLTests.csproj", "{2F0A4B1B-D4C7-4228-A4EA-5580E5FB1B77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4B04AECC-E1D9-494F-96D8-74DCB78CCD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B04AECC-E1D9-494F-96D8-74DCB78CCD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B04AECC-E1D9-494F-96D8-74DCB78CCD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0A4B1B-D4C7-4228-A4EA-5580E5FB1B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0A4B1B-D4C7-4228-A4EA-5580E5FB1B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0A4B1B-D4C7-4228-A4EA-5580E5FB1B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0A4B1B-D4C7-4228-A4EA-5580E5FB1B77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
