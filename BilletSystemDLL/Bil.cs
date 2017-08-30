@@ -8,6 +8,22 @@ namespace BilletSystemDLL
 {
     public class Bil
     {
+        public string Nummerplade;
+        public DateTime Dato;
+
+        public Bil()
+        {
+
+        }
+        public int Pris()
+        {
+            return 240;
+        }
+
+        public string Køretøj()
+        {
+            return "Bil";
+        }
 
     }
 }
