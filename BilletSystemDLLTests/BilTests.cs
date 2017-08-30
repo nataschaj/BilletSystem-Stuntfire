@@ -12,7 +12,7 @@ namespace BilletSystemDLL.Tests
     public class BilTests
     {
         [TestMethod()]
-        public void PrisTestBil()
+        public void TestBilPris()
         {
             //Arrange
             var testBil = new Bil();
@@ -22,6 +22,19 @@ namespace BilletSystemDLL.Tests
 
             //Assert
             Assert.AreEqual(240, pris);
+        }
+
+        [TestMethod()]
+        public void TestBilType()
+        {
+            //Arrange
+            var testBil = new Bil();
+
+            //Act
+            string bilType = testBil.Køretøj();
+
+            //Assert
+            Assert.AreEqual("Bil", bilType);
         }
     }
 }
