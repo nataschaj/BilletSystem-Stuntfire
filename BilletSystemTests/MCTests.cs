@@ -1,12 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BilletSystem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BilletSystemDLL;
 
-namespace BilletSystem.Tests
+namespace BilletSystemDLL.Tests
 {
     [TestClass()]
     public class MCTests
