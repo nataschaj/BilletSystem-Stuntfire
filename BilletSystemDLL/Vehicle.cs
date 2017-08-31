@@ -24,5 +24,14 @@ namespace BilletSystemDLL
         public abstract int Pris();
 
         public abstract string Køretøj();
+
+        public string TjekNummerplade(string nummerplade)
+        {
+            if (nummerplade.Length > 7)
+            {
+                throw new ArgumentException("En nummerplade må max bestå af 7 tegn");
+            }
+            else return nummerplade;
+        }
     }
 }
