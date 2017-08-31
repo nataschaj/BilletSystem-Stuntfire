@@ -6,23 +6,24 @@ using System.Threading.Tasks;
 
 namespace BilletSystemDLL
 {
-    public class MC
+    public class MC : Vehicle
     {
-        public string Nummerplade;
-        public DateTime Dato;
-
         public MC()
         {
-
         }
-        public int Pris()
+
+        public MC(string nummerplade, DateTime dato) : base(nummerplade, dato)
         {
-            return 125;
         }
 
-        public string Køretøj()
+        public override string Køretøj()
         {
             return "MC";
+        }
+
+        public override int Pris()
+        {
+            return 125;
         }
     }
 }
