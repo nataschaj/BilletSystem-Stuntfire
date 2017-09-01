@@ -10,9 +10,15 @@ namespace BilletSystemDLL
     {
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
-
+        public int BrobizzRabat { get; set; }
+            
         public Vehicle()
         {
+        }
+
+        public Vehicle(int bizzRabat)
+        {
+            this.BrobizzRabat = bizzRabat;
         }
 
         public Vehicle(string nummerplade, DateTime dato)
