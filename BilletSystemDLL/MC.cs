@@ -12,7 +12,7 @@ namespace BilletSystemDLL
         {
         }
 
-        public MC(string nummerplade, DateTime dato) : base(nummerplade, dato)
+        public MC(string nummerplade, DateTime dato, bool harBrobizz) : base(nummerplade, dato, harBrobizz)
         {
         }
 
@@ -21,7 +21,7 @@ namespace BilletSystemDLL
             return "MC";
         }
 
-        public override int Pris()
+        public override int Pris(bool harBrobizz)
         {
             return 125;
         }

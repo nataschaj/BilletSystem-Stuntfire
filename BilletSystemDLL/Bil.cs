@@ -12,7 +12,12 @@ namespace BilletSystemDLL
         {
         }
 
-        public Bil(string nummerplade, DateTime dato) : base(nummerplade, dato)
+        public Bil(bool harBrobizz):base(harBrobizz)
+        {
+
+        }
+
+        public Bil(string nummerplade, DateTime dato, bool harBrobizz):base(nummerplade, dato, harBrobizz)
         {
         }
 
@@ -21,9 +26,19 @@ namespace BilletSystemDLL
             return "Bil";
         }
 
-        public override int Pris()
+        public override int Pris(bool harBrobizz)
         {
-            return 240;
+            int BroPris = 240;
+
+            if (harBrobizz == true)
+            {
+                BroPris = 240 * 95 / 100;
+            }
+            //else if (harBrobizz == false)
+            //{
+            //    BroPris = 240;
+            //}
+            return BroPris;
         }
     }
 }

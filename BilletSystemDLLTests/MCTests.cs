@@ -12,7 +12,7 @@ namespace BilletSystemDLL.Tests
             var testMC = new MC();
 
             //Act
-            int testMCpris = testMC.Pris();
+            int testMCpris = testMC.Pris(false);
 
             //Assert
             Assert.AreEqual(125, testMCpris);

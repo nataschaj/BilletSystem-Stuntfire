@@ -11,27 +11,54 @@ namespace BilletSystemDLL.Tests
     [TestClass()]
     public class VehicleTests
     {
+        //Test af Bil
         [TestMethod()]
-        public void TjekNummerpladeFor7Tegn()
+        public void TjekNummerplade_Bil_7Tegn()
         {
             //Arrange
-            var testVehicle = new Bil();
+            var testBil = new Bil();
 
             //Act
-            string nummerplade = testVehicle.TjekNummerplade(nummerplade: "AB34567");
+            string nummerplade = testBil.TjekNummerplade(nummerplade: "AB34567");
 
             //Assert
             Assert.AreEqual("AB34567", nummerplade);
         }
 
         [TestMethod()]
-        public void TjekNummerpladeFor8Tegn()
+        [ExpectedException(typeof(ArgumentException))]
+        public void TjekNummerplade_Bil_8Tegn()
         {
             //Arrange
-            var testVehicle = new Bil();
+            var testBil = new Bil();
 
             //Act
-            string nummerplade = testVehicle.TjekNummerplade(nummerplade: "AB345678");
+            string nummerplade = testBil.TjekNummerplade(nummerplade: "AB345678");
+        }
+
+        //Test af MC
+        [TestMethod()]
+        public void TjekNummerplade_MC_7Tegn()
+        {
+            //Arrange
+            var testMC = new MC();
+
+            //Act
+            string nummerplade = testMC.TjekNummerplade(nummerplade: "AB34567");
+
+            //Assert
+            Assert.AreEqual("AB34567", nummerplade);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TjekNummerplade_MC_8Tegn()
+        {
+            //Arrange
+            var testMC = new MC();
+
+            //Act
+            string nummerplade = testMC.TjekNummerplade(nummerplade: "AB345678");
         }
     }
 }

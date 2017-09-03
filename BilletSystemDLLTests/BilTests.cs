@@ -6,16 +6,29 @@ namespace BilletSystemDLL.Tests
     public class BilTests
     {
         [TestMethod()]
-        public void TestBilPris()
+        public void TestBilPrisUdenBrobizz()
         {
             //Arrange
             var testBil = new Bil();
 
             //Act
-            int pris = testBil.Pris();
+            int pris = testBil.Pris(false);
 
             //Assert
             Assert.AreEqual(240, pris);
+        }
+
+        [TestMethod()]
+        public void TestBilPrisMedBrobizz()
+        {
+            //Arrange
+            var testBil = new Bil();
+
+            //Act
+            int pris = testBil.Pris(true);
+
+            //Assert
+            Assert.AreEqual(228, pris);
         }
 
         [TestMethod()]

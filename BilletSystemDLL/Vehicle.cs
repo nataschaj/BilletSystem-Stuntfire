@@ -10,10 +10,12 @@ namespace BilletSystemDLL
     {
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
+        public bool HarBrobizz { get; set; }
         public int BrobizzRabat { get; set; }
             
         public Vehicle()
         {
+            this.BrobizzRabat = (5 / 100);
         }
 
         public Vehicle(int bizzRabat)
@@ -21,13 +23,19 @@ namespace BilletSystemDLL
             this.BrobizzRabat = bizzRabat;
         }
 
-        public Vehicle(string nummerplade, DateTime dato)
+        public Vehicle(string nummerplade, DateTime dato, bool harBrobizz)
         {
             this.Nummerplade = nummerplade;
             this.Dato = dato;
+            this.HarBrobizz = harBrobizz;
         }
 
-        public abstract int Pris();
+        public Vehicle(bool harBrobizz)
+        {
+            this.HarBrobizz = harBrobizz;
+        }
+
+        public abstract int Pris(bool harBrobizz);
 
         public abstract string Køretøj();
 
@@ -39,5 +47,16 @@ namespace BilletSystemDLL
             }
             else return nummerplade;
         }
+
+        //public int HarDuBrobizz(bool harBrobizz)
+        //{
+        //    int nyPris = Pris();
+
+        //    if (harBrobizz == true)
+        //    {
+        //        nyPris = Pris() * (95/100);
+        //    }
+        //    return nyPris;
+        //}
     }
 }
