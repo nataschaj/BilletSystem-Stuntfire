@@ -6,10 +6,10 @@ namespace BilletSystemDLL.Tests
     public class MCTests
     {
         [TestMethod()]
-        public void MCTestPrisUdenBrobizz()
+        public void MC_Pris_Uden_Brobizz_Fredag()
         {
             //Arrange
-            var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), true);
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 01), false);
 
             //Act
             int testMCpris = testMC.Pris();
@@ -19,7 +19,34 @@ namespace BilletSystemDLL.Tests
         }
 
         [TestMethod()]
-        public void MCTestPrisMedBrobizz()
+        public void MC_Pris_Med_Brobizz_Fredag()
+        {
+            //Arrange
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 01), true);
+
+            //Act
+            int testMCpris = testMC.Pris();
+
+            //Assert
+            Assert.AreEqual(118, testMCpris);
+        }
+
+        //Lørdag med og uden Brobizz
+        [TestMethod()]
+        public void MC_Pris_Uden_Brobizz_Lørdag()
+        {
+            //Arrange
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), false);
+
+            //Act
+            int testMCpris = testMC.Pris();
+
+            //Assert
+            Assert.AreEqual(100, testMCpris);
+        }
+
+        [TestMethod()]
+        public void MC_Pris_Med_Brobizz_Lørdag()
         {
             //Arrange
             var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), true);
@@ -28,7 +55,7 @@ namespace BilletSystemDLL.Tests
             int testMCpris = testMC.Pris();
 
             //Assert
-            Assert.AreEqual(118, testMCpris);
+            Assert.AreEqual(95, testMCpris);
         }
 
         [TestMethod()]

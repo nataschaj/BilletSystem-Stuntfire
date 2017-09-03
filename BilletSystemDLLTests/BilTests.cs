@@ -5,6 +5,7 @@ namespace BilletSystemDLL.Tests
     [TestClass()]
     public class BilTests
     {
+        //Fredag med og uden Brobizz
         [TestMethod()]
         public void Pris_Uden_Brobizz_fredag()
         {
@@ -31,6 +32,7 @@ namespace BilletSystemDLL.Tests
             Assert.AreEqual(228, pris);
         }
 
+        //Lørdag med og uden Brobizz
         [TestMethod()]
         public void Pris_Uden_Brobizz_Lørdag()
         {

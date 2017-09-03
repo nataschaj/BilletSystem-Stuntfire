@@ -21,10 +21,15 @@ namespace BilletSystemDLL
         {
             int BroPris = 125;
 
-            if (HarBrobizz == true)
+            if (base.Dato.DayOfWeek == DayOfWeek.Saturday || base.Dato.DayOfWeek == DayOfWeek.Sunday)
             {
-                BroPris = 125 * 95 / 100;
+                BroPris = 125 * 80 / 100; //Weekend giver 20%
             }
+            if (base.HarBrobizz == true)
+            {
+                BroPris = +BroPris * 95 / 100; //Brobizz giver yderligere 5%
+            }
+
             return BroPris;
         }
     }
