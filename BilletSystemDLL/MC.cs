@@ -8,10 +8,6 @@ namespace BilletSystemDLL
 {
     public class MC : Vehicle
     {
-        public MC()
-        {
-        }
-
         public MC(string nummerplade, DateTime dato, bool harBrobizz) : base(nummerplade, dato, harBrobizz)
         {
         }
@@ -21,9 +17,15 @@ namespace BilletSystemDLL
             return "MC";
         }
 
-        public override int Pris(bool harBrobizz)
+        public override int Pris()
         {
-            return 125;
+            int BroPris = 125;
+
+            if (HarBrobizz == true)
+            {
+                BroPris = 125 * 95 / 100;
+            }
+            return BroPris;
         }
     }
 }

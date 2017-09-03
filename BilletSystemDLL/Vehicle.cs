@@ -13,21 +13,31 @@ namespace BilletSystemDLL
         public bool HarBrobizz { get; set; }
         public int BrobizzRabat { get; set; }
             
-        public Vehicle()
-        {
-            this.BrobizzRabat = (5 / 100);
-        }
-
-        public Vehicle(int bizzRabat)
-        {
-            this.BrobizzRabat = bizzRabat;
-        }
-
         public Vehicle(string nummerplade, DateTime dato, bool harBrobizz)
         {
-            this.Nummerplade = nummerplade;
             this.Dato = dato;
             this.HarBrobizz = harBrobizz;
+
+            if (nummerplade.Length > 7)
+            {
+                throw new ArgumentException("En nummerplade må max bestå af 7 tegn");
+            }
+            else
+            {
+                this.Nummerplade = nummerplade;
+            }
+        }
+
+        public Vehicle(string nummerplade)
+        {
+            if (nummerplade.Length > 7)
+            {
+                throw new ArgumentException("En nummerplade må max bestå af 7 tegn");
+            }
+            else
+            {
+                this.Nummerplade = nummerplade;
+            }
         }
 
         public Vehicle(bool harBrobizz)
@@ -35,18 +45,23 @@ namespace BilletSystemDLL
             this.HarBrobizz = harBrobizz;
         }
 
-        public abstract int Pris(bool harBrobizz);
+        public Vehicle(DateTime dato)
+        {
+            Dato = dato;
+        }
+
+        public abstract int Pris();
 
         public abstract string Køretøj();
 
-        public string TjekNummerplade(string nummerplade)
-        {
-            if (nummerplade.Length > 7)
-            {
-                throw new ArgumentException("En nummerplade må max bestå af 7 tegn");
-            }
-            else return nummerplade;
-        }
+        //public string TjekNummerplade(string nummerplade)
+        //{
+        //    if (nummerplade.Length > 7)
+        //    {
+        //        throw new ArgumentException("En nummerplade må max bestå af 7 tegn");
+        //    }
+        //    else return nummerplade;
+        //}
 
         //public int HarDuBrobizz(bool harBrobizz)
         //{

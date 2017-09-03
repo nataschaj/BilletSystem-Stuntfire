@@ -6,23 +6,36 @@ namespace BilletSystemDLL.Tests
     public class MCTests
     {
         [TestMethod()]
-        public void MCTestPris()
+        public void MCTestPrisUdenBrobizz()
         {
             //Arrange
-            var testMC = new MC();
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), true);
 
             //Act
-            int testMCpris = testMC.Pris(false);
+            int testMCpris = testMC.Pris();
 
             //Assert
             Assert.AreEqual(125, testMCpris);
         }
 
         [TestMethod()]
+        public void MCTestPrisMedBrobizz()
+        {
+            //Arrange
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), true);
+
+            //Act
+            int testMCpris = testMC.Pris();
+
+            //Assert
+            Assert.AreEqual(118, testMCpris);
+        }
+
+        [TestMethod()]
         public void MCTestType()
         {
             //Arrange
-            var testMC = new MC();
+            var testMC = new MC("1234567", new System.DateTime(2017, 09, 02), true);
 
             //Act
             string testMCtype = testMC.Køretøj();

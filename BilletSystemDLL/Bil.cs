@@ -8,15 +8,6 @@ namespace BilletSystemDLL
 {
     public class Bil : Vehicle
     {
-        public Bil()
-        {
-        }
-
-        public Bil(bool harBrobizz):base(harBrobizz)
-        {
-
-        }
-
         public Bil(string nummerplade, DateTime dato, bool harBrobizz):base(nummerplade, dato, harBrobizz)
         {
         }
@@ -26,19 +17,25 @@ namespace BilletSystemDLL
             return "Bil";
         }
 
-        public override int Pris(bool harBrobizz)
+        public override int Pris()
         {
             int BroPris = 240;
 
-            if (harBrobizz == true)
+            if (base.Dato.DayOfWeek == DayOfWeek.Saturday || base.Dato.DayOfWeek == DayOfWeek.Sunday)
             {
-                BroPris = 240 * 95 / 100;
+                BroPris = 240 * 80 / 100; //Weekend giver 20%
             }
-            //else if (harBrobizz == false)
-            //{
-            //    BroPris = 240;
-            //}
+            if (base.HarBrobizz == true)
+            {
+                BroPris =+ BroPris * 95 / 100; //Brobizz giver yderligere 5%
+            }
+
             return BroPris;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
