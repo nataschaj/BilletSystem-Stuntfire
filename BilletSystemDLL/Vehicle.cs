@@ -11,12 +11,13 @@ namespace BilletSystemDLL
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
         public bool HarBrobizz { get; set; }
-        public int BrobizzRabat { get; set; }
-            
-        public Vehicle(string nummerplade, DateTime dato, bool harBrobizz)
+        public string HvilkenBro { get; set; }
+
+        public Vehicle(string nummerplade, DateTime dato, bool harBrobizz, string hvilkenBro)
         {
             this.Dato = dato;
             this.HarBrobizz = harBrobizz;
+            this.HvilkenBro = hvilkenBro;
 
             if (nummerplade.Length > 7)
             {
