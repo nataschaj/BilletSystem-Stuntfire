@@ -13,6 +13,8 @@ namespace BilletSystemDLL
         public bool HarBrobizz { get; set; }
         public string HvilkenBro { get; set; }
 
+
+
         public Vehicle(string nummerplade, DateTime dato, bool harBrobizz, string hvilkenBro)
         {
             this.Dato = dato;
@@ -29,6 +31,10 @@ namespace BilletSystemDLL
             }
         }
 
+        /// <summary>
+        /// overloaded constructor
+        /// </summary>
+        /// <param name="nummerplade"></param>
         public Vehicle(string nummerplade)
         {
             if (nummerplade.Length > 7)
